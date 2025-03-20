@@ -284,16 +284,15 @@ function renderAsemicLetter(letter, x, y) {
     text_layer.strokeWeight(random(1, 3)); // random strokeweight
     text_layer.stroke(0, 210, 0, random(150, 255)); // random alpha
     text_layer.beginShape();
-    // using randomGaussian to shift points slightly from their original spot
     for (let pt of sampledPts) {
-      text_layer.curveVertex(pt.x + randomGaussian(), pt.y + randomGaussian());
+      text_layer.curveVertex(pt.x, pt.y);
     }
     // close loop by passing first 2 points back into curveVertex
     if (sampledPts.length >= 2) {
       let pt = sampledPts[0];
-      text_layer.curveVertex(pt.x + randomGaussian(), pt.y + randomGaussian());
+      text_layer.curveVertex(pt.x, pt.y);
       pt = sampledPts[1];
-      text_layer.curveVertex(pt.x + randomGaussian(), pt.y + randomGaussian());
+      text_layer.curveVertex(pt.x, pt.y);
     }
     text_layer.endShape();
   }
