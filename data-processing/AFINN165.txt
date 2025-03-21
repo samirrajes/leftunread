@@ -331,6 +331,7 @@ biased	-2
 big	1
 bitch	-5
 bitches	-5
+bimbos	-3
 bitter	-2
 bitterest	-2
 bitterly	-2

@@ -277,7 +277,7 @@ function samplePoints(points, count) {
 // function that takes a letter, and xy pos, and renders a textured asemic character
 function renderAsemicLetter(letter, x, y) {
   let pts = font.textToPoints(letter, x, y, 26, { sampleFactor: 0.1 }); // sample points with textToPoints
-  let sampledPts = samplePoints(pts, 6); // further sample 6 points from the sampled points
+  let sampledPts = samplePoints(pts, 5); // further sample 6 points from the sampled points
   let layers = 3; // draw 2 layers, higher number -> more scratchy sort of texture
   for (let l = 0; l < layers; l++) {
     text_layer.noFill();
@@ -286,14 +286,14 @@ function renderAsemicLetter(letter, x, y) {
     text_layer.beginShape();
     // using randomGaussian to shift points slightly from their original spot
     for (let pt of sampledPts) {
-      text_layer.curveVertex(pt.x + randomGaussian(), pt.y + randomGaussian());
+      text_layer.curveVertex(pt.x, pt.y);
     }
     // close loop by passing first 2 points back into curveVertex
     if (sampledPts.length >= 2) {
       let pt = sampledPts[0];
-      text_layer.curveVertex(pt.x + randomGaussian(), pt.y + randomGaussian());
+      text_layer.curveVertex(pt.x, pt.y);
       pt = sampledPts[1];
-      text_layer.curveVertex(pt.x + randomGaussian(), pt.y + randomGaussian());
+      text_layer.curveVertex(pt.x, pt.y);
     }
     text_layer.endShape();
   }
