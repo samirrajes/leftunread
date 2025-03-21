@@ -1,4 +1,11 @@
-# this script takes all text files within a folder, and compiles only the text messages sent by me
+# This script takes all text files within a folder, and compiles only the text messages sent by me
+
+# Learned these concepts during my bachelors degree. 
+# But needed a refresher on advanced regex
+# References for regex code are linked
+# reference: https://stackoverflow.com/questions/33404752/removing-emojis-from-a-string-in-python
+# reference: https://coderpad.io/blog/development/the-complete-guide-to-regular-expressions-regex/
+# reference: https://docs.python.org/3/library/re.html
 
 import os
 import re

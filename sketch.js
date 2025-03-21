@@ -1,3 +1,10 @@
+// AFINN
+// Reference: https://thecodingtrain.com/challenges/44-afinn-111-sentiment-analysis
+
+// Asemic Generation algo inspired by Inconvergent's Sand Glyphs
+// Reference: https://inconvergent.net/generative/sand-glyphs/
+// and my own texture algo: https://editor.p5js.org/samirrjsh/sketches/DTJ9oJQnE
+
 let names_list = []; // list of names to redact
 let frequency = {}; // holds pre-generated n-gram freq table
 let current_gram = ""; // holds current gram from freq table
@@ -232,6 +239,7 @@ function isName(word) {
 
 // removes punctuation from the beginning and end of a word
 // keeps punctuation in the middle the same (example: we dont want words like i'll to become ill)
+// reference: https://docs.python.org/3/library/re.html
 function sanitize(word) {
   return word.replace(/(^[^\w']+)|([^\w']+$)/g, '');
 }

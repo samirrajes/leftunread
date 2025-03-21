@@ -4,6 +4,8 @@
 # Basically for this project, I created a curated list of names that appear in my messages, 
 # and used this script to further process them.
 
+# Learned these concepts during my bachelors degree.
+
 # read curated names list
 with open('path/to/curated/names/file', 'r', encoding='utf-8') as file:
     # remove whitespace and empty lines

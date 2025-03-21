@@ -1,10 +1,14 @@
-import json
-import sys
-
 # this script builds a word-level n-gram dictionary from a given text file.
 # each n-gram maps to a list of words that follow it.
-
 # you can use this script with this command: python3 generate_ngram.py [path/to/text/file] [n]
+
+# Learned these concepts during my bachelors degree.
+# I adapted the n-gram generation algorithm from class, to a word gram in python
+
+# reference: https://docs.python.org/3/library/json.html
+
+import json
+import sys
 
 # code adapted from p5js implementation of n-gram from class
 def build_ngram(text, n=1):

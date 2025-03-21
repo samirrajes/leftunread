@@ -1,7 +1,9 @@
-import re
-
 # This script just adds periods to the end of sentences in the data file when they dont end in punctuation.
 # Most people dont end texts with puntuation so this was a good way to fix this.
+
+# Learned these concepts during my bachelors degree.
+
+import re
 
 input_file = "/path/to/input/txt"
 output_file = "/path/to/output/txt"
