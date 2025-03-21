@@ -21,7 +21,7 @@ let word_sentiment = 0; // sentiment score for current word
 // we want some neutral words to also be rendered asemically to further
 // strip information from the text
 // this achieves a better visual effect, as well as communicates the message of the piece
-let asemic_prob = 0.25; // 25% chance
+let asemic_prob = 0.30; // 30% chance
 let render_asemic = false;
 
 let font;
