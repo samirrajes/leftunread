@@ -62,7 +62,7 @@ function setup() {
   curr_y = 40;
 
   // lower frame rate for more natural typing speed
-  frameRate(25); 
+  frameRate(12); 
 
   // parse afinn file into a lookup dictionary.
   for (let i = 0; i < afinn_data.length; i++) {
