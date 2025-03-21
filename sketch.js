@@ -153,7 +153,7 @@ function draw() {
         curr_x = 20;
         curr_y += line_spacing;
         // pause for 750ms at sentence end
-        pause_timer = millis() + 750;
+        pause_timer = millis() + random(500,1500);
         // use last word as key context for next word
         if (frequency.hasOwnProperty(finished_word)) {
           curr_word = random(frequency[finished_word]);
